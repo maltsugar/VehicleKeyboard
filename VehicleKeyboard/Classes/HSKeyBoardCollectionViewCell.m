@@ -36,8 +36,8 @@
         self.iconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 24, 17)];
         self.iconImageView.center = CGPointMake(self.shadowImageVIew.center.x, self.shadowImageVIew.center.y);
         [self.contentView addSubview:self.iconImageView];
-        UIImage *normalImage = [[[UIImage alloc]initWithContentsOfFile:[kHSBundle pathForResource:@"btn_normal@2x" ofType:@"png" inDirectory:@"Image"]] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
-        UIImage *pressedImage = [[[UIImage alloc]initWithContentsOfFile:[kHSBundle pathForResource:@"btn_pressed@2x" ofType:@"png" inDirectory:@"Image"]] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+        UIImage *normalImage = [[[UIImage alloc]initWithContentsOfFile:[kMainBundle pathForResource:@"btn_normal@2x" ofType:@"png" inDirectory:@"Image"]] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+        UIImage *pressedImage = [[[UIImage alloc]initWithContentsOfFile:[kMainBundle pathForResource:@"btn_pressed@2x" ofType:@"png" inDirectory:@"Image"]] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
         self.shadowImageVIew.image = normalImage;
         self.shadowImageVIew.highlightedImage = pressedImage;
         self.contentView.backgroundColor = [UIColor clearColor];
@@ -71,7 +71,7 @@
     self.centerLabel.text = @"";
     self.iconImageView.hidden = NO;
     self.centerLabel.frame = CGRectMake(left, 12, size.width - left, 21);
-    UIImage *normalImage = [[[UIImage alloc]initWithContentsOfFile:[kHSBundle pathForResource:@"delete@2x" ofType:@"png" inDirectory:@"Image"]] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    UIImage *normalImage = [[[UIImage alloc]initWithContentsOfFile:[kMainBundle pathForResource:@"delete@2x" ofType:@"png" inDirectory:@"Image"]] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
     self.iconImageView.image = normalImage;
     self.iconImageView.center = CGPointMake(self.shadowImageVIew.center.x, self.shadowImageVIew.center.y);
 }

@@ -1,11 +1,11 @@
 //
-//  UITextField+Extension.m
+//  UITextField+ExtensionKeyBoard.m
 //  VehicleKeyboard
 //
 //  Created by huashengsheng on 2021/4/23.
 //
 
-#import "UITextField+Extension.h"
+#import "UITextField+ExtensionKeyBoard.h"
 
 
 const void * vehicleKeyboardText = "VehicleKeyboardText";
@@ -13,10 +13,10 @@ const void * vehicleKeyboardShow = "vehicleKeyboardShow";
 const void * vehicleKeyboardHidden = "vehicleKeyboardHidden";
 
 
-@implementation UITextField (Extension)
+@implementation UITextField (ExtensionKeyBoard)
 
 
-- (void)changeToPlatePWKeyBoardInpurView{
+- (void)changeToPlateBoardInpurView{
     HSKeyBoardView *keyboardView = [[HSKeyBoardView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
     self.inputView = keyboardView;
     keyboardView.delegate = self;
@@ -64,8 +64,10 @@ const void * vehicleKeyboardHidden = "vehicleKeyboardHidden";
 - (void)refreshKeyboard:(BOOL)isMoreType{
     //当输入框处于填满状态时，输入的下标往前移动一位数
     HSKeyBoardView *keyboardView = (HSKeyBoardView *)self.inputView;
-    HSKeyboardNumType numType = keyboardView.numType == newEnergy ? newEnergy : [KeyboardEngine detectNumberTypeOf:self.text];
-    NSInteger maxCount = (numType == newEnergy || numType == wuJing) ? 8 : 7;
+//    HSKeyboardNumType numType = keyboardView.numType == newEnergy ? newEnergy : [KeyboardEngine detectNumberTypeOf:self.text];
+//    NSInteger maxCount = (numType == newEnergy || numType == wuJing) ? 8 : 7;
+    
+    NSInteger maxCount = 8;
     NSInteger inpuntIndex = maxCount <= self.text.length  ? (self.text.length - 1) : self.text.length;
     [keyboardView updateText:self.text isMoreType:isMoreType inputIndex:inpuntIndex];
 }
@@ -74,13 +76,17 @@ const void * vehicleKeyboardHidden = "vehicleKeyboardHidden";
     if (self.text == nil) {
         return NO;
     }
-    HSKeyBoardView *keyboardView = (HSKeyBoardView *)self.inputView;
-    BOOL complete = NO;
-    if (keyboardView.numType == newEnergy || keyboardView.numType == wuJing) {
-        complete = self.text.length == 8;
-    }else {
-        complete = self.text.length == 7;
-    }
+//    HSKeyBoardView *keyboardView = (HSKeyBoardView *)self.inputView;
+
+//    BOOL complete = NO;
+//    if (keyboardView.numType == newEnergy || keyboardView.numType == wuJing) {
+//        complete = self.text.length == 8;
+//    }else {
+//        complete = self.text.length == 7;
+//    }
+    
+    BOOL complete = self.text.length == 8;
+    
     return complete;
 }
 @end

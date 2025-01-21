@@ -14,7 +14,7 @@
     if (self = [super initWithFrame:frame]) {
         // 55 74
         self.backgroundImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        self.backgroundImageView.image = [[UIImage alloc] initWithContentsOfFile:[kHSBundle pathForResource:@"pressed@2x" ofType:@"png" inDirectory:@"Image"]];
+        self.backgroundImageView.image = [[UIImage alloc] initWithContentsOfFile:[kMainBundle pathForResource:@"pressed@2x" ofType:@"png" inDirectory:@"Image"]];
         [self addSubview:self.backgroundImageView];
         
         self.centerTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, 50)];

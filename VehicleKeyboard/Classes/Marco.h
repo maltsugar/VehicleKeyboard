@@ -67,6 +67,6 @@ static NSString *const _CHAR_SHI = @"使";
 static NSString *const _CHAR_SPECIAL = @"学警港澳航挂试超使领";
 static NSString *const _STR_HK_MACAO = @"港澳";
 
-#define kMainBundle [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"VehicleKeyboard" ofType:@"bundle"]]
+#define kMainBundle [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"HSBundle" ofType:@"bundle"]]
 #define kHSBundle   [NSBundle bundleWithPath:[kMainBundle pathForResource:@"HSBundle.bundle" ofType:nil]]
 #endif /* Marco_h */

@@ -1,5 +1,5 @@
 //
-//  UITextField+Extension.h
+//  UITextField+ExtensionKeyBoard.h
 //  VehicleKeyboard
 //
 //  Created by huashengsheng on 2021/4/23.
@@ -11,9 +11,9 @@
 #import "KeyboardEngine.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UITextField (Extension)<HSKeyBoardViewDeleagte>
+@interface UITextField (ExtensionKeyBoard)<HSKeyBoardViewDeleagte>
 
-- (void)changeToPlatePWKeyBoardInpurView;
+- (void)changeToPlateBoardInpurView;
 
 - (void)changePlateInputType:(BOOL)isNewEnergy;
 
